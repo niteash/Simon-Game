@@ -1,5 +1,6 @@
 let gameSeq = [];
 let userSeq = [];
+let body = document.querySelector("body")
 
 let btns = ["red","green","blue","orange"]
 
@@ -17,7 +18,15 @@ document.addEventListener("keypress",()=>{
     levelup();
    }
 })
-
+body.addEventListener("click",()=>{
+    if(start == false){
+     console.log("Game has started!");
+     start = true;
+ 
+ 
+     levelup();
+    }
+ })
 function gameFlash(btn) {
     btn.classList.add("flash");
     setTimeout(()=>{
